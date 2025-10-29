@@ -1,4 +1,41 @@
 /* Definindo a cor do Fundo do site*/
-body{
-    background-color: #23d140ad;
+body {
+    margin: 0px;
+    /* Propriedade: valor; */
+    background-color: #efe7dc;; /* Um cinza bem clarinho */
+    font-family: Arial, sans-serif; /* Define a fonte padrão do texto */
 }
+header{
+    padding: 20px 0px;
+    background-color: #c05a3d;
+    font-family: Arial, sans-serif;
+ 
+    color: #efe7dc;
+    nav ul{
+        list-style: none;
+        display: flex; 
+    }   
+    nav ul li a {/* o nav ul li a formarta a distância entre os links e retira a formatação original*/
+        margin: 0 20px;
+        text-decoration: none;
+        color: #efe7dc;/* Definindo a cor do texto dentro do bloco informado*/
+    }
+   
+}
+
+#sobre{
+    background-color: #4f7b4a;
+    color: #efe7dc;}
+
+.sobre-principal {
+    align-items: center;
+    background-color: #efe7dc;
+    color: black;
+    display: flex;}
+
+.sobre-principal img {
+    width: 300px !important; 
+    margin-left: 20px;}
+.sobre-texto {
+    /* Deixa o bloco de texto "crescer" para ocupar o espaço */
+    flex-grow: 1;}
