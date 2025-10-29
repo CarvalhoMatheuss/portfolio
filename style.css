@@ -2,7 +2,7 @@
 body {
     margin: 0px;
     /* Propriedade: valor; */
-    background-color: #efe7dc;; /* Um cinza bem clarinho */
+    background-color: #efe7dc;
     font-family: Arial, sans-serif; /* Define a fonte padrão do texto */
 }
 header{
@@ -24,6 +24,7 @@ header{
 }
 
 #sobre{
+   
     background-color: #4f7b4a;
     color: #efe7dc;}
 
@@ -35,7 +36,18 @@ header{
 
 .sobre-principal img {
     width: 300px !important; 
-    margin-left: 20px;}
+    margin-left: 0px;}
 .sobre-texto {
     /* Deixa o bloco de texto "crescer" para ocupar o espaço */
+    max-width: 15%;
+    margin-right: 30%;
+    margin-left: 1%;
     flex-grow: 1;}
+
+#projetos{
+    padding: 40px;
+    align-items: center;
+    background-color: #efe7dc;
+    
+}
+
