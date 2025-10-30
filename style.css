@@ -1,53 +1,156 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+:root {
+  --terra-cota: #c05a3d;
+  --verde-folha: #4f7b4a;
+  --marrom-escuro: #5a3b28;
+  --azul-pavao: #255c74;
+  --vermelho-vivo: #b23535;
+  --areia-clara: #efe7dc;
+  --transicao-botao-git: #108cde;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
 /* Definindo a cor do Fundo do site*/
 body {
-    margin: 0px;
-    /* Propriedade: valor; */
-    background-color: #efe7dc;
-    font-family: Arial, sans-serif; /* Define a fonte padrão do texto */
-}
-header{
-    padding: 20px 0px;
-    background-color: #c05a3d;
-    font-family: Arial, sans-serif;
- 
-    color: #efe7dc;
-    nav ul{
-        list-style: none;
-        display: flex; 
-    }   
-    nav ul li a {/* o nav ul li a formarta a distância entre os links e retira a formatação original*/
-        margin: 0 20px;
-        text-decoration: none;
-        color: #efe7dc;/* Definindo a cor do texto dentro do bloco informado*/
-    }
-   
+  margin: 0px; /* Propriedade: valor; */
+  background-color: var(--areia-clara);
+  font-family: Arial, sans-serif; /* Define a fonte padrão do texto */
 }
 
-#sobre{
-   
-    background-color: #4f7b4a;
-    color: #efe7dc;}
-
+header {
+  padding: 20px 0px;
+  background-color: var(--terra-cota);
+  font-family: Arial, sans-serif;
+  color: var(--areia-clara);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li a {
+  /* o nav ul li a formarta a distância entre os links e retira a formatação original*/
+  margin: 0 20px;
+  text-decoration: none;
+  color: var(
+    --areia-clara
+  ); /* Definindo a cor do texto dentro do bloco informado*/
+}
+#sobre {
+  background-color: var(--verde-folha);
+  color: var(--areia-clara);
+}
 .sobre-principal {
-    align-items: center;
-    background-color: #efe7dc;
-    color: black;
-    display: flex;}
-
+  align-items: center;
+  background-color: var(--areia-clara);
+  color: black;
+  display: flex;
+}
 .sobre-principal img {
-    width: 300px !important; 
-    margin-left: 0px;}
+  width: 300px !important;
+  margin-left: 0px;
+}
 .sobre-texto {
-    /* Deixa o bloco de texto "crescer" para ocupar o espaço */
-    max-width: 15%;
-    margin-right: 30%;
-    margin-left: 1%;
-    flex-grow: 1;}
-
-#projetos{
-    padding: 40px;
-    align-items: center;
-    background-color: #efe7dc;
+  /* Deixa o bloco de texto "crescer" para ocupar o espaço */
+  max-width: 65%;
+  margin-right: 30%;
+  margin-left: 1%;
+  flex-grow: 1;
+}
+#projetos {
+  background-color: var(--marrom-escuro);
+  color: var(--areia-clara);
+  padding: 40px;
+}
+.projeto-item {
     
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: var(--areia-clara);
+  color: var(--vermelho-vivo);
+  border-radius: 10px;
+  padding: 20px;
+  text-decoration: none;
+}
+.projeto-item img {
+  width: 200px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+.projeto-item:nth-child(2n + 1) {
+  background-color: var(--verde-folha);
+  color: var(--areia-clara);
 }
 
+.projeto-item:nth-child(2n + 1) a {
+  color: var(--areia-clara);
+}
+
+.projeto-item:nth-child(2n + 1) a:hover {
+  color: var(--areia-clara);
+}
+.projeto-texto .botao {
+    background-color: var(--azul-pavao);
+    color: var(--areia-clara);
+    padding: 10px 20px;
+    border-radius: 6px;
+    display: inline-block;
+    width: fit-content;
+    margin-top: 10px;
+     text-decoration: none;
+}
+.projeto-texto .botao:hover {
+background-color: var(--marrom-escuro);
+}
+#github .botao {
+  background-color: var(--azul-pavao);
+  color: var(--areia-clara);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#github .botao:hover {
+  background-color: var(--transicao-botao-git);
+}
+#contato {
+  background-color: var(--terra-cota);
+  color: var(--areia-clara);
+  padding: 40px;
+  text-align: center;
+}
+#contato a {
+  color: var(--areia-clara);
+  text-decoration: none;
+}
+#contato a:hover {
+  color: var(--verde-folha);
+} 
+/* Responsive tweaks */
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+  .sobre-texto {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  nav ul {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+}
