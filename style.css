@@ -24,6 +24,7 @@ body {
 body {
   margin: 0px; /* Propriedade: valor; */
   background-color: var(--areia-clara);
+  color: var(--vermelho-vivo);
   font-family: Arial, sans-serif; /* Define a fonte padrão do texto */
 }
 
